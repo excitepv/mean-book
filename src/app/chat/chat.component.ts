@@ -37,7 +37,7 @@ export class ChatComponent implements OnInit {
 
   onMsgSubmit():void{
   	this.http.
-    post("http://192.168.7.144:3000/api/post_new_chat",this.chat).
+    post("http://localhost:3000/api/post_new_chat",this.chat).
     subscribe(
       data  => {
       console.log("Message is successful ");
@@ -53,7 +53,7 @@ export class ChatComponent implements OnInit {
 
   loadAllChats():void{
   	this.http.
-    get("http://192.168.7.144:3000/api/get_chats").
+    get("http://localhost:3000/api/get_chats").
     subscribe(
       data  => {
       console.log("chats loaded  successfully ");

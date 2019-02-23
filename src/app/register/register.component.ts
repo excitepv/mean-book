@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
   
     this.http.
-    post("http://192.168.7.144:3000/api/create_user",this.user).
+    post("http://localhost:3000/api/create_user",this.user).
     subscribe(
       data  => {
       console.log("POST Request is successful ", data);

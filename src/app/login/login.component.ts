@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit():void{
     this.http.
-    post("http://192.168.7.144:3000/api/do_login",this.user).
+    post("http://localhost:3000/api/do_login",this.user).
     subscribe(
       data  => {
       console.log("Login Request is successful ");
