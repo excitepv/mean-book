@@ -95,9 +95,14 @@ app.post('/api/post_new_chat', (req, res)=>{
 	})
 });
 
-//to do login user
-app.get("/api/get_chats", (req, res)=>{
-	mChat.find({},
+//to do latest chats
+app.get("/api/get_chats/:lastSynced", (req, res)=>{
+	let query ={};
+	if(req.params.lastSynced != "null")
+		query={'crAt' : {
+			$gt:new Date().setTime(parseInt(req.params.lastSynced))}};
+
+	mChat.find(query,
 		{userName:1,msg:1,crAt:1},
 		{sort:{crAt: -1}},
 		(err, docs)=>{

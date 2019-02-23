@@ -1,0 +1,12 @@
+.messageList {
+  height: 60vh;
+  overflow-y: scroll;
+}
+.chatInput{
+	border-radius: 10px;
+	height: 50px;
+}
+.btn-success{
+	height: 50px;
+	border-radius: 10px;
+}

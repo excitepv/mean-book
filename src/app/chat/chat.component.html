@@ -1,27 +1,25 @@
 <div class="container py-5">
-	<h1>
-		Chat Component
-	</h1>
-
-	<div class="col-md-12">
-		<input class="col-md-8" type="textarea" name="msg" [(ngModel)]="chat.msg"  placeholder="What's in your mind?">
+	<div class="card col-md-12">
+	  <div class="card-body">
+	  	<input class="chatInput col-md-8" type="text" name="msg" [(ngModel)]="chat.msg"  placeholder="What's in your mind?">
 		<button class="ml-1 col-md-3 btn btn-success" (click)="onMsgSubmit()">
 			Post
 		</button>
+	  </div>
 	</div>
 
 	<!-- Chats list goes here -->
-	<div class="container" *ngFor="let chat of allChats">
-		<h3>
-			{{chat.userName}}
-		</h3>
-		<h4>
-			{{chat.msg}}
-		</h4>
-		<h5>
-			{{chat.crAt|date:"medium"}}
-		</h5>
-		<br>
-	</div>
+	<div class="list-group messageList">
+	    <a  class="list-group-item" *ngFor="let chat of allChats" style="max-height: 90px !important;">
+	      	<h5 class="list-group-item-heading">
+	      	{{chat.msg}}
+	  		</h5>
+	      	<p class="list-group-item-text">
+		    {{chat.userName}} on 
+		    <small>{{chat.crAt|date:"medium"}}</small>
+		  	</p>
+	    </a>
+	    
+	  </div>
 </div>
 

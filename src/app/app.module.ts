@@ -7,13 +7,16 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { ChatComponent } from './chat/chat.component';
+import { MessageComponent } from './message/message.component';
+ import {MessageService} from './message.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ChatComponent
+    ChatComponent,
+    MessageComponent
     
   ],
   imports: [
