@@ -1,0 +1,27 @@
+<div class="container py-5">
+	<h1>
+		Chat Component
+	</h1>
+
+	<div class="col-md-12">
+		<input class="col-md-8" type="textarea" name="msg" [(ngModel)]="chat.msg"  placeholder="What's in your mind?">
+		<button class="ml-1 col-md-3 btn btn-success" (click)="onMsgSubmit()">
+			Post
+		</button>
+	</div>
+
+	<!-- Chats list goes here -->
+	<div class="container" *ngFor="let chat of allChats">
+		<h3>
+			{{chat.userName}}
+		</h3>
+		<h4>
+			{{chat.msg}}
+		</h4>
+		<h5>
+			{{chat.crAt|date:"medium"}}
+		</h5>
+		<br>
+	</div>
+</div>
+

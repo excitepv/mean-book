@@ -1,0 +1,45 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+
+                    <!-- form card login -->
+                    <div class="card rounded-0">
+                        <div class="card-header">
+                            <h3 class="mb-0">Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control form-control-lg rounded-0" name="email" [(ngModel)]="user.email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg rounded-0" name="password" [(ngModel)]="user.password">
+                                </div>
+                                <div>
+                                	<span>
+                                		<a routerLink="/register">
+										  New user? then register
+										</a>
+                                	</span>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg float-right"(click)="onSubmit()">Login</button>
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                    </div>
+                    <!-- /form card login -->
+
+                </div>
+
+
+            </div>
+            <!--/row-->
+
+        </div>
+        <!--/col-->
+    </div>
+</div>

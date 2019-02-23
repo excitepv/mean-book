@@ -1,0 +1,53 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+
+                    <!-- form card login -->
+                    <div class="card rounded-0">
+                        <div class="card-header">
+                            <h3 class="mb-0">Register</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" id="formRegister">
+                                <div class="form-group">
+                                    <label for="uname1">Name</label>
+                                    <input type="text" class="form-control form-control-lg rounded-0" type="text" name="userName" [(ngModel)]="user.userName">
+                                </div>
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input type="number" class="form-control form-control-lg rounded-0" type="number" name="age" [(ngModel)]="user.age">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control form-control-lg rounded-0" name="email" [(ngModel)]="user.email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg rounded-0" name="password" [(ngModel)]="user.password">
+                                </div>
+                                <div>
+                                	<span>
+                                		<a routerLink="/login">
+										  Already registered? then login
+										</a>
+                                	</span>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg float-right"(click)="onSubmit()">Register</button>
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                    </div>
+                    <!-- /form card login -->
+
+                </div>
+
+
+            </div>
+            <!--/row-->
+
+        </div>
+        <!--/col-->
+    </div>
+</div>
