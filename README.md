@@ -1,5 +1,7 @@
 # MeanBook
 
+A simple chat application using MongoDB, ExpressJs, Angaulr 7 and Nodejs.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
 ## Development server
